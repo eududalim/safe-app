@@ -23,7 +23,7 @@ class Home extends StatelessWidget {
       color: Colors.pink[100],
       child: Center(
         child: Text("Safe App", 
-          style: TextStyle(color: Colors.pink[600], fontSize: 14.0)
+          style: TextStyle(color: Colors.pink[600], fontSize: 20.0)
         )
       ),
     );
