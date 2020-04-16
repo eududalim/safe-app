@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 
 // Pagina estática de inicialização do app
@@ -21,7 +19,7 @@ class _InitPageState extends State<InitPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text("Safe App", 
+              Text("Go Safe", 
               style: TextStyle(color: Colors.pink[600], fontSize: 40.0, fontWeight: FontWeight.bold)
               ),
               Icon(Icons.location_on, color: Colors.pink[600], size: 100.0,)
