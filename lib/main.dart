@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:safe_app/view/init_page.dart';
 
 import 'package:safe_app/view/login.dart';
 
@@ -18,8 +17,4 @@ class MyApp extends StatelessWidget {
       home: LoginPage(),
     );
   }
-}
-
-_home () {
-  
 }
