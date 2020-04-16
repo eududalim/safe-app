@@ -1,3 +1,4 @@
+import 'dart:js';
 
 import 'package:flutter/material.dart';
 
@@ -10,9 +11,7 @@ class InitPage extends StatefulWidget {
 }
 
 class _InitPageState extends State<InitPage> {
-
   
-
   @override
   Widget build(BuildContext context) {
     return Container(      
