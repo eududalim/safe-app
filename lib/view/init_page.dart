@@ -1,32 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:safe_app/view/style.dart';
 
-// Pagina estática de inicialização do app
 
-class InitPage extends StatefulWidget {
-  @override
-  _InitPageState createState() => _InitPageState();
-  
+Container tituloDoApp() {
+  return Container(
+      alignment: Alignment.bottomCenter,
+      //height: 200,
+      //width: 300,
+      child: Text(
+        "Go Safe",
+        style: themeTextTitle(),
+        textScaleFactor: 1.3,
+      ));
 }
 
-class _InitPageState extends State<InitPage> {
-  
-  @override
-  Widget build(BuildContext context) {
-    return Container(      
-      child: Scaffold(
-        backgroundColor: Colors.pink[100],
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text("Go Safe", 
-              style: TextStyle(color: Colors.pink[600], fontSize: 40.0, fontWeight: FontWeight.bold)
-              ),
-              Icon(Icons.location_on, color: Colors.pink[600], size: 100.0,)
-            ],
-          ),
-        ),
-      )
-    );
-  }
+Container iconeDoApp() {
+  return Container(
+    alignment: Alignment.topCenter,
+    padding: EdgeInsets.all(50),
+    child: Image.asset(
+      'images/icon1.png',
+      height: 100,
+      width: 100,
+    ),
+  );
 }

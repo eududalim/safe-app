@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:safe_app/view/init_page.dart';
 import 'package:safe_app/view/style.dart';
 
 class LoginPage extends StatefulWidget {
@@ -13,30 +13,25 @@ class _LoginPageState extends State<LoginPage> {
     return Container(
       child: Scaffold(
         backgroundColor: Colors.pink[50],
-        body: Column(          
+        body: Column(
           children: <Widget>[
-            Container(
-              alignment: Alignment.topCenter,
-              padding: EdgeInsets.fromLTRB(0,50,0,30),
-              child: Text("Go Safe", style: themeTextTitle(), textScaleFactor: 1.3, ),
-            ),
+            tituloDoApp(),
             Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Center(
                     child: Text(
-                      "Entrar",
+                      "ENTRE",
                       style: TextStyle(color: Colors.pink[800], fontSize: 35),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.all(20),
+                    padding: EdgeInsets.all(15),
                     child: TextFormField(
                       keyboardType: TextInputType.emailAddress,
-                      onTap: () {
-                        
-                      },
+                      onTap: () {},
                       decoration: InputDecoration(
                         disabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(30.0),
@@ -46,28 +41,25 @@ class _LoginPageState extends State<LoginPage> {
                         hintText: "Digite seu email",
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(30.0),
-                            borderSide: BorderSide(color: Colors.red)),
+                            borderSide: BorderSide(color: Colors.pink[800])),
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.all(10),
-                    child: raisedButton("OK"),
-                  ),
+                  raisedButton('OK'),
                   FlatButton(
                     child: Text(
                       "Ou Cadastre-se",
-                      textScaleFactor: 1.3,
+                      textScaleFactor: 1.1,
                     ),
                     textColor: Colors.pink[800],
                     shape: UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.pink[800])),
                     onPressed: () {},
                   ),
-                  //Image.asset('images\icon1.png', height: 50, width: 50, ),
                 ],
               ),
             ),
+            iconeDoApp(),
           ],
         ),
       ),
