@@ -1,4 +1,4 @@
-import 'package:safe_app/view/init_page.dart';
+import 'package:safe_app/style/style.dart';
 import 'package:safe_app/view/login.dart';
 import 'package:splashscreen/splashscreen.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +14,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
     return MaterialApp(
       title: 'Go Safe',
       home: SplashScreenWidget(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -30,7 +31,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
     return Stack(
       children: <Widget>[
         SplashScreen(
-          seconds: 5,
+          seconds: 10,
           backgroundColor: Colors.pink[50],
           navigateAfterSeconds: LoginPage(),
           loaderColor: Colors.transparent,

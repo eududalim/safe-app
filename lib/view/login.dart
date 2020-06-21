@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:safe_app/view/init_page.dart';
-import 'package:safe_app/view/style.dart';
+import 'package:safe_app/style/style.dart';
+import 'package:safe_app/view/homePage.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -14,8 +14,12 @@ class _LoginPageState extends State<LoginPage> {
       child: Scaffold(
         backgroundColor: Colors.pink[50],
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            tituloDoApp(),
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: tituloDoApp(),
+            ),
             Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -24,7 +28,7 @@ class _LoginPageState extends State<LoginPage> {
                   Center(
                     child: Text(
                       "ENTRE",
-                      style: TextStyle(color: Colors.pink[800], fontSize: 35),
+                      style: TextStyle(color: Colors.pink[800], fontSize: 30),
                     ),
                   ),
                   Padding(
@@ -45,7 +49,10 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
-                  raisedButton('OK'),
+                  raisedButton('OK', () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => HomePage()));
+                  }),
                   FlatButton(
                     child: Text(
                       "Ou Cadastre-se",
